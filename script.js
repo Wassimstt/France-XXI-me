@@ -1,4 +1,4 @@
-// Tiny template router: loads templates into #app based on hash routes
+// Simple template router + small Instagram tab logic
 (function(){
   const app = document.getElementById('app');
   const templates = {};
@@ -18,20 +18,12 @@
     app.appendChild(clone);
     setActiveLink(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // optional: attach click handlers for large images to open in new tab
-    app.querySelectorAll('.photo-grid a, .gallery-grid a').forEach(a => {
-      a.addEventListener('click', (ev) => {
-        // default opens in new tab via target="_blank" in template links
-      });
-    });
+
+    // After rendering, attach Instagram tab behavior if present
+    setupInstagramTabs();
   }
 
-  // handle clicks on menu anchors
-  document.body.addEventListener('click', function(e){
-    const a = e.target.closest('[data-goto]');
-    if (a) { e.preventDefault(); const p = a.getAttribute('data-goto'); location.hash = '#/' + p; return; }
-  });
-
+  // navigation via menu links
   document.querySelectorAll('.main-nav a').forEach(a => {
     a.addEventListener('click', (ev) => {
       ev.preventDefault();
@@ -40,6 +32,16 @@
     });
   });
 
+  // data-goto buttons
+  document.body.addEventListener('click', function(e){
+    const go = e.target.closest('[data-goto]');
+    if (go) {
+      const p = go.getAttribute('data-goto');
+      location.hash = '#/' + p;
+    }
+  });
+
+  // resolve hash to page
   function resolveHash() {
     const h = location.hash.replace(/^#\/?/, '');
     const page = h || 'home';
@@ -48,4 +50,24 @@
 
   window.addEventListener('hashchange', resolveHash);
   resolveHash();
+
+  // Instagram simple tabs
+  function setupInstagramTabs(){
+    const tabs = document.querySelectorAll('.tab');
+    if (!tabs) return;
+    tabs.forEach(t => {
+      t.addEventListener('click', () => {
+        tabs.forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        const target = t.dataset.tab;
+        // for this simple demo, only Posts tab shows content; others can be extended
+        const posts = document.getElementById('insta-posts');
+        if (posts) {
+          if (target === 'posts') posts.style.display = 'grid';
+          else posts.style.display = 'none';
+        }
+      });
+    });
+  }
+
 })();
