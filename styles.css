@@ -1,126 +1,278 @@
-/* ================= GLOBAL RESET ================= */
-* { box-sizing: border-box; }
-html,body { height:100%; margin:0; }
+/* -------------------------------
+   STYLE GLOBAL "LE MONDE MODERNE"
+   Minimaliste, bleu foncé, lignes fines
+---------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;600&display=swap');
+
+:root {
+    --bleu-titre: #1a3a5f;
+    --bleu-texte: #163559;
+    --bleu-clair: #e6eef7;
+    --noir: #222;
+    --gris: #666;
+    --fond: #ffffff;
+    --max-width: 1100px;
+}
+
+/* -------------------------------
+   RESET & GLOBAL
+---------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: "Segoe UI", "Liberation Sans", Arial, sans-serif;
-  color:#0d2b3a;
-  background:#f6f8fa;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+    font-family: "Merriweather", serif;
+    background: var(--fond);
+    color: var(--noir);
+    line-height: 1.8;
+    padding-top: 140px; /* espace sous le header */
 }
 
-/* ================= HEADER ================= */
-.site-header {
-  background: linear-gradient(90deg,#0b2340 0%, #09335a 100%);
-  color:#fff;
-  padding:14px 12px;
-  position:sticky;
-  top:0;
-  z-index:60;
-  box-shadow:0 6px 20px rgba(10,30,60,0.2);
-}
-.header-inner { max-width:1200px; margin:0 auto; display:flex; gap:18px; align-items:center; justify-content:space-between; padding:0 12px; }
-.brand h1 { margin:0; font-size:1.15rem; letter-spacing:0.4px; }
-.brand .tag { margin:0; font-size:0.85rem; color:#dfefff; }
-
-/* NAV */
-.main-nav ul { list-style:none; display:flex; gap:12px; margin:0; padding:0; }
-.main-nav a { color:#e8f3ff; text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:700; display:inline-block; }
-.main-nav a:hover, .main-nav a.active { background:rgba(255,255,255,0.06); transform:translateY(-2px); }
-
-/* ================= LAYOUT ================= */
-.container { max-width:1200px; margin:24px auto; padding:0 16px; }
-
-/* SECTION / ARTICLE */
-.section { background:#fff; border-radius:12px; padding:22px; margin-bottom:20px; box-shadow:0 12px 34px rgba(10,30,60,0.06); }
-.article-long { line-height:1.65; }
-.section h2 { margin-top:0; color:#08293f; border-left:6px solid #d4a84a; padding-left:12px; display:inline-block; }
-
-/* LEDE */
-.lede { font-weight:600; color:#163340; margin-bottom:14px; }
-
-/* HERO LAYOUT */
-.hero { display:grid; grid-template-columns:1fr 420px; gap:18px; align-items:start; }
-.hero-left h2 { font-size:1.8rem; margin:0 0 8px; color:#06223a; }
-.lead { color:#294a5e; margin-bottom:12px; }
-
-/* PHOTO STACK (right) */
-.photo-stack { display:flex; flex-direction:column; gap:10px; }
-.photo-stack img { width:100%; height:120px; object-fit:cover; border-radius:10px; box-shadow:0 10px 30px rgba(10,30,60,0.1); }
-
-/* GRID LAYOUTS */
-.grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
-.two-col { display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:start; }
-
-/* CARDS */
-.card { background:#fff8ee; border-left:4px solid #d4a84a; padding:12px; border-radius:8px; }
-
-/* PHOTO GRIDS - text and photos separated with '.separated' ensuring spacing */
-.photo-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:14px; align-items:start; }
-.photo-grid img { width:100%; height:200px; object-fit:cover; border-radius:8px; box-shadow:0 8px 20px rgba(10,30,60,0.08); transition:transform .16s; }
-.photo-grid img:hover { transform:scale(1.02); }
-
-/* 'large' variant uses taller thumbnails */
-.photo-grid.large img { height:260px; }
-
-/* 'separated' class adds larger margins so text never overlaps images */
-.separated { margin-top:18px; padding-top:6px; }
-
-/* TIMELINE */
-.timeline-list { list-style:none; padding:0; margin:0; display:grid; gap:18px; }
-.timeline-item img { width:100%; height:220px; object-fit:cover; border-radius:8px; }
-
-/* GALLERY */
-.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
-.gallery-grid img { width:100%; height:200px; object-fit:cover; border-radius:8px; }
-
-/* INSTAGRAM (IG1 realistic layout) */
-.insta-top { display:flex; gap:18px; align-items:center; margin-bottom:12px; }
-.insta-avatar { width:96px; height:96px; border-radius:50%; object-fit:cover; border:3px solid #fff; box-shadow:0 8px 20px rgba(10,30,60,0.12); }
-.insta-meta { display:flex; flex-direction:column; gap:6px; }
-.insta-name { margin:0; font-size:1.2rem; color:#06223a; }
-.insta-handle { margin:0; color:#405b6a; font-weight:600; }
-.bio { color:#334e5a; margin:6px 0; max-width:68ch; }
-
-/* STORIES row */
-.insta-stories { display:flex; gap:12px; margin:12px 0; }
-.story { display:flex; flex-direction:column; gap:6px; align-items:center; }
-.story img { width:72px; height:72px; border-radius:50%; object-fit:cover; border:3px solid #fff; box-shadow:0 6px 18px rgba(10,30,60,0.1); }
-.story span { font-size:0.85rem; color:#335463; }
-
-/* TABS */
-.insta-tabs { display:flex; gap:8px; margin-bottom:12px; }
-.tab { padding:8px 12px; border-radius:8px; border:1px solid rgba(10,30,60,0.06); background:#fff; cursor:pointer; font-weight:700; }
-.tab.active { background:#0b3b66; color:#fff; }
-
-/* POSTS GRID */
-.insta-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-.insta-post img { width:100%; height:180px; object-fit:cover; border-radius:8px; display:block; }
-.caption { padding:8px 6px; color:#223e4e; font-size:0.95rem; }
-
-/* STATS & ACTIONS */
-.insta-stats { display:flex; gap:18px; margin-top:8px; font-weight:700; color:#06223a; align-items:center; }
-.insta-actions { display:flex; gap:10px; margin-top:12px; }
-.btn { padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:800; border:0; }
-.btn.primary { background:#0b3b66; color:#fff; }
-.btn.outline { background:#fff; color:#0b3b66; border:2px solid #0b3b66; }
-
-/* FOOTER */
-.site-footer { padding:18px 12px; text-align:center; color:#fff; background: linear-gradient(90deg,#09335a,#0b2340); margin-top:28px; }
-
-/* RESPONSIVE */
-@media (max-width:980px) {
-  .hero { grid-template-columns:1fr; }
-  .two-col { grid-template-columns:1fr; }
-  .photo-grid img { height:180px; }
-  .photo-grid.large img { height:200px; }
-  .insta-grid { grid-template-columns:repeat(2,1fr); }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 4px;
 }
 
-@media (max-width:560px) {
-  .main-nav ul { flex-wrap:wrap; gap:6px; }
-  .photo-grid img, .gallery-grid img { height:140px; }
-  .insta-grid { grid-template-columns:1fr; }
-  .insta-avatar { width:76px; height:76px; }
-  .hero-right img { height:100px; }
+h1, h2, h3 {
+    font-family: "Lora", serif;
+    color: var(--bleu-titre);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h2 {
+    font-size: 1.9rem;
+    border-bottom: 1px solid var(--bleu-clair);
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin: 15px 0;
+    font-size: 1.05rem;
+    color: var(--noir);
+}
+
+a {
+    color: var(--bleu-titre);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------
+   HEADER & NAVIGATION
+---------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--fond);
+    border-bottom: 2px solid var(--bleu-clair);
+    padding: 25px 0;
+    z-index: 1000;
+}
+
+header .container {
+    width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--gris);
+}
+
+/* -------------------------------
+   STRUCTURES DES SECTIONS
+---------------------------------*/
+
+section {
+    width: var(--max-width);
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+/* Texte + image séparés proprement */
+.section-block {
+    margin-bottom: 60px;
+}
+
+.section-block img {
+    margin-top: 20px;
+}
+
+/* -------------------------------
+   PAGE : GALERIE
+---------------------------------*/
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 18px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    height: 240px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* -------------------------------
+   PAGE : TIMELINE
+---------------------------------*/
+
+.timeline {
+    width: var(--max-width);
+    margin: auto;
+}
+
+.event {
+    border-left: 3px solid var(--bleu-titre);
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.event h3 {
+    margin-bottom: 10px;
+}
+
+.event img {
+    margin: 15px 0;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* -------------------------------
+   PAGE : INSTAGRAM (IG1 RÉALISTE)
+---------------------------------*/
+
+.instagram-container {
+    width: 480px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.ig-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.ig-header img {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.ig-username {
+    font-weight: bold;
+}
+
+.ig-bio {
+    padding: 0 15px 15px 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.ig-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ig-posts-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.ig-post {
+    border-bottom: 1px solid #eee;
+}
+
+.ig-post img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.ig-post .legend {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
+
+.ig-actions {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+
+/* -------------------------------
+   FOOTER
+---------------------------------*/
+
+footer {
+    background: var(--bleu-clair);
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    text-align: center;
+    color: var(--bleu-texte);
+}
+
+/* -------------------------------
+   RESPONSIVE
+---------------------------------*/
+
+@media (max-width: 900px) {
+    section {
+        width: 90%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instagram-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
 }
