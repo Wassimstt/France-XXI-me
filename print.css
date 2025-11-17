@@ -1,15 +1,28 @@
-/* Version imprimée : pas de couleurs sombres, juste lisible */
+/* Mise en page épurée pour impression PDF */
 body {
-    font-size: 14px;
-    background: white;
+    font-family: "Georgia", serif;
     color: black;
+    background: white;
 }
 
-header, footer, nav {
-    display: none;
+header, nav, footer {
+    display: none; /* Cache le menu pour impression */
 }
 
 img {
     max-width: 100%;
-    page-break-inside: avoid;
+    margin: 15px 0;
+}
+
+h1, h2, h3 {
+    page-break-after: avoid;
+}
+
+section {
+    margin: 20px;
+    padding: 10px;
+}
+
+@page {
+    margin: 1.5cm;
 }
