@@ -1,460 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>La France au XXIᵉ siècle — Projet étudiant</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <title>France au XXIe siècle – Accueil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- SITE HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <h1>La France au XXIᵉ siècle</h1>
-        <p class="tag">Projet étudiant — dossier historique et photographique</p>
-      </div>
-
-      <nav class="main-nav" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#/" data-page="home" class="nav-link">Accueil</a></li>
-          <li><a href="#/politique" data-page="politique" class="nav-link">Politique</a></li>
-          <li><a href="#/societe" data-page="societe" class="nav-link">Société</a></li>
-          <li><a href="#/economie" data-page="economie" class="nav-link">Économie</a></li>
-          <li><a href="#/culture" data-page="culture" class="nav-link">Culture</a></li>
-          <li><a href="#/timeline" data-page="timeline" class="nav-link">Timeline</a></li>
-          <li><a href="#/galerie" data-page="galerie" class="nav-link">Galerie</a></li>
-          <li><a href="#/sources" data-page="sources" class="nav-link">Sources</a></li>
-          <li><a href="#/instagram" data-page="instagram" class="nav-link">Le Révolutionniste</a></li>
-        </ul>
-      </nav>
+<header>
+    <div class="container">
+        <h1>France au XXIe siècle</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="instagram.html">Instagram</a>
+            <a href="sources.html">Sources</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <!-- MAIN APP CONTAINER -->
-  <main id="app" class="container"></main>
+<section>
+    <h2>Comprendre la France contemporaine</h2>
+    <p>
+        Depuis l’an 2000, la France a traversé une succession de transformations majeures qui ont redéfini son
+        identité sociale, économique, culturelle et politique. L’entrée dans le XXIe siècle s’est ouverte sur la
+        globalisation accélérée, l’intégration européenne renforcée, l’essor du numérique et de nouvelles dynamiques
+        sociales. Ces mutations ont façonné une nation plus connectée, mais aussi confrontée à des défis inédits.
+    </p>
+    <p>
+        Le rôle de l’État, les politiques sociales, l’évolution du territoire et les nouvelles façons de s’informer
+        ont profondément changé le rapport des citoyens à la démocratie. Les débats sur la laïcité, l’écologie,
+        la cohésion nationale et l’avenir du modèle social français sont devenus centraux. L’émergence des réseaux
+        sociaux a modifié la manière dont les Français s’expriment, militant, débattent et s’organisent.
+    </p>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>© 2025 — Projet étudiant. Toutes images : à déposer dans /images/ (placeholders IA).</p>
-      <p>Remplacez les fichiers images par vos propres fichiers ou images IA générées.</p>
-    </div>
-  </footer>
+    <img src="images/accueil-01.jpg" alt="Image d'accueil">
 
-  <!-- TEMPLATES : une "page" par template -->
-  <template id="tpl-home">
-    <section class="hero section">
-      <div class="hero-left">
-        <h2>Panorama : la France au XXIᵉ siècle</h2>
-        <p class="lead">
-          Ce dossier propose une lecture historique de la France depuis 2000. Il articule analyses politiques, transformations sociales,
-          enjeux économiques et mutations culturelles. Chaque rubrique combine textes d'analyse, repères chronologiques et illustrations photographiques.
-        </p>
+    <p>
+        Parallèlement, l’économie française a dû s’adapter à une compétition internationale renforcée, à la transition
+        numérique, à la financiarisation mondiale et aux nouvelles exigences écologiques. Le monde du travail s’est
+        reconfiguré autour d’emplois plus flexibles, de secteurs innovants mais aussi d’inégalités persistantes.
+        Les débats sur le pouvoir d’achat, la précarité et la réforme des retraites ont fortement structuré la vie
+        politique.
+    </p>
 
-        <h3>Comment utiliser ce site</h3>
+    <p>
+        La culture française, elle aussi, s’est renouvelée : explosion du cinéma d’auteur, nouveaux courants musicaux,
+        transformation du paysage médiatique, et montée en puissance des plateformes numériques. La France demeure
+        un pays d’innovation, de création et de débats intellectuels intenses.
+    </p>
+
+    <div class="section-block">
+        <h2>Les grands axes du site</h2>
         <p>
-          Navigue via le menu en haut. Toutes les « pages » sont chargées dynamiquement : politique, société, économie, culture, timeline, galerie,
-          puis le profil Instagram pédagogique « Le Révolutionniste ». Les images sont des placeholders : dépose tes images locales dans /images/ pour les afficher.
+            Ce site propose une exploration approfondie de la France au XXIe siècle à travers plusieurs catégories :
         </p>
-      </div>
+        <ul>
+            <li><strong>Politique</strong> : institutions, réformes, mouvements sociaux, enjeux démocratiques.</li>
+            <li><strong>Société</strong> : évolution des modes de vie, immigration, laïcité, jeunesse, territoire.</li>
+            <li><strong>Culture</strong> : cinéma, musique, médias, nouveaux usages numériques et patrimoine.</li>
+            <li><strong>Économie</strong> : mondialisation, industrie, innovations, crises et mutations du travail.</li>
+        </ul>
+        <p>
+            Chacune de ces thématiques est illustrée par des analyses détaillées, des images et une mise en contexte
+            approfondie afin de comprendre les forces profondes qui sculptent la France contemporaine.
+        </p>
+    </div>
+</section>
 
-      <div class="hero-right photo-stack">
-        <!-- Placeholder images à remplacer dans /images/ -->
-        <img src="images/ia-hero-01.jpg" alt="Skyline France (placeholder)">
-        <img src="images/ia-hero-02.jpg" alt="Reportage culturel (placeholder)">
-        <img src="images/ia-hero-03.jpg" alt="Manifestation - reportage (placeholder)">
-      </div>
-    </section>
+<footer>
+    <p>Projet étudiant – Histoire de la France contemporaine</p>
+</footer>
 
-    <section class="section">
-      <h2>Présentation détaillée</h2>
-
-      <p>
-        Le XXIᵉ siècle se caractérise par une succession d'événements (crises économiques, attentats, pandémies), une accélération
-        technologique et une recomposition des hiérarchies politiques. Ces phénomènes ne s'interprètent pas isolément : ils interagissent,
-        modifient les pratiques sociales (travail, consommation, mobilisations) et influent sur la production culturelle.
-      </p>
-
-      <p>
-        Ce site adopte une posture d'historien-journaliste : vérifier les sources, contextualiser les faits, proposer des synthèses
-        comparatives et documenter visuellement. Les rubriques ci-dessous développent ces éléments avec des textes approfondis et des images.
-      </p>
-    </section>
-  </template>
-
-  <!-- POLITIQUE -->
-  <template id="tpl-politique">
-    <article class="section article-long">
-      <h2>Politique — Recomposition, institutions et crises</h2>
-
-      <p class="lede">
-        La vie politique française a connu, depuis 2000, des transformations structurelles profondes. Ces changements relèvent à la fois
-        des évolutions institutionnelles, de la recomposition des appareils partisans et des nouvelles formes de mobilisation citoyenne.
-      </p>
-
-      <!-- TEXT LONG: multiparagraphes pour niveau "très long" -->
-      <h3>1. Transition des systèmes partisans</h3>
-      <p>
-        Au tournant des années 2000, la bipolarisation classique — droite/gauche — commence à se fissurer. Des mouvements politiques
-        émergent, s’appuient sur des logiques médiatiques et numériques, et redessinent les clivages traditionnels. Les campagnes électorales se personnalisent,
-        l’image et la stratégie de communication gagnent en importance, et des acteurs non traditionnels s’implantent durablement.
-      </p>
-      <p>
-        Les conséquences matérielles et symboliques de cette recomposition sont nombreuses : affaiblissement des machines partisanes,
-        volatilité des électorats et démocratisation de l'accès à la parole publique via les réseaux sociaux. Cela a conduit à des cycles
-        électoraux imprévisibles et à une demande accrue de renouvellement.
-      </p>
-
-      <h3>2. Sécurité, droit et politiques publiques</h3>
-      <p>
-        Les attentats des années 2010 ont provoqué un tournant dans la politique de sécurité. Les dispositifs législatifs, les pratiques policières
-        et la surveillance numérique ont été renforcés, suscitant des débats récurrents sur les libertés publiques. Les périodes de crise mettent à l’épreuve
-        l’équilibre entre protection et libertés, et interrogent la capacité des institutions à répondre sans fragiliser le lien démocratique.
-      </p>
-      <p>
-        Par ailleurs, les politiques sociales et économiques (réformes du marché du travail, réforme des retraites, politiques fiscales) ont été au centre
-        de conflits sociaux et de recompositions électorales. Ces politiques révèlent des arbitrages difficiles entre compétitivité, équité et cohésion.
-      </p>
-
-      <h3>3. Mobilisations et société civile</h3>
-      <p>
-        Les mobilisations (Gilets jaunes, marches pour le climat, mobilisations étudiantes) traduisent des tensions territoriales et sociales.
-        Elles sont souvent multiformes : actions en ligne, manifestations de rue, occupations et campagnes culturelles. L’étude des mobilisations exige
-        de croiser données locales, discours médiatiques et trajectoires individuelles des acteurs.
-      </p>
-      <p>
-        Les institutions se trouvent fréquemment en décalage avec ces nouvelles formes d’action, ce qui génère des crises de légitimité et
-        appelle des innovations démocratiques — participation citoyenne, consultations locales, expérimentations institutionnelles.
-      </p>
-
-      <section class="photo-grid large separated">
-        <img src="images/ia-politique-01.jpg" alt="Assemblée (placeholder)">
-        <img src="images/ia-politique-02.jpg" alt="Manifestation (placeholder)">
-        <img src="images/ia-politique-03.jpg" alt="Campagne électorale (placeholder)">
-      </section>
-
-      <h3>4. Perspectives</h3>
-      <p>
-        Pour les historiens du futur, la période 2000–2030 sera sans doute l’objet d’étude privilégié : recomposition des systèmes politiques,
-        crise de la représentation et émergence de formes d’action nouvelles. Comprendre ces dynamiques implique de préserver des sources
-        (archives numériques, témoignages, médias) et d’analyser les continuums culturels et institutionnels.
-      </p>
-    </article>
-  </template>
-
-  <!-- SOCIÉTÉ -->
-  <template id="tpl-societe">
-    <article class="section article-long">
-      <h2>Société — Transformations sociales, inégalités et modes de vie</h2>
-
-      <p class="lede">
-        Les évolutions sociales du XXIᵉ siècle recouvrent des mutations démographiques, des recompositions familiales,
-        des transformations du travail et des expressions culturelles renouvelées.
-      </p>
-
-      <h3>1. Démographie et territoires</h3>
-      <p>
-        La France voit se poursuivre un double mouvement : concentration métropolitaine et fragilisation de certains territoires ruraux.
-        L’urbanisation change la structure sociale, modifie l’accès aux services publics et crée des tensions sur les questions de mobilité et de logement.
-        Le vieillissement de la population ajoute une contrainte sur la santé publique et les systèmes de retraite.
-      </p>
-
-      <h3>2. Travail, précarité et numérique</h3>
-      <p>
-        Le développement des plateformes et la numérisation des emplois ont produit des formes de précarité nouvelles. Le télétravail, généralisé à certaines périodes,
-        a transformé l’organisation du temps et les relations entre employeurs et salariés. L’éducation et la reconversion professionnelle sont au centre des politiques publiques.
-      </p>
-
-      <h3>3. Mobilités sociales et culturelles</h3>
-      <p>
-        Les parcours d’intégration et les identités se recomposent sous l’effet des migrations, de l’éducation et des inégalités. Les expressions culturelles se diversifient,
-        mais s’accompagnent parfois d’un débat sur la place des traditions et des patrimoines locaux.
-      </p>
-
-      <section class="photo-grid separated">
-        <img src="images/ia-societe-01.jpg" alt="Quartier urbain (placeholder)">
-        <img src="images/ia-societe-02.jpg" alt="Jeunes (placeholder)">
-        <img src="images/ia-societe-03.jpg" alt="Vie quotidienne (placeholder)">
-        <img src="images/ia-societe-04.jpg" alt="Hôpital (placeholder)">
-      </section>
-
-      <h3>4. Réponses politiques</h3>
-      <p>
-        Les politiques publiques cherchent à réduire les fractures : politiques ciblées sur la santé, l’éducation, la mobilité et la rénovation urbaine.
-        L’analyse historique montre que les réponses sont souvent incrémentales et que les tensions territoriales demeurent un défi majeur.
-      </p>
-    </article>
-  </template>
-
-  <!-- ECONOMIE -->
-  <template id="tpl-economie">
-    <article class="section article-long">
-      <h2>Économie — Mondialisation, crises et transition</h2>
-
-      <p class="lede">
-        L’économie française du XXIᵉ siècle est marquée par l’alternance entre périodes de croissance, chocs externes (crise 2008, pandémie) et efforts
-        de transition vers des modèles soutenables.
-      </p>
-
-      <h3>1. Crises et résilience</h3>
-      <p>
-        Les crises financières et sanitaires ont mis en lumière la fragilité des chaînes d'approvisionnement et la nécessité d'outils de résilience.
-        Les politiques de relance, le soutien aux secteurs stratégiques et la modernisation industrielle ont été au centre des débats.
-      </p>
-
-      <h3>2. Innovation et French Tech</h3>
-      <p>
-        La French Tech illustre l’effort de structuration de l’écosystème numérique : start-ups, incubateurs, financements. Cependant, la réussite
-        économique reste inégale selon les territoires et les filières.
-      </p>
-
-      <h3>3. Transition écologique et emplois</h3>
-      <p>
-        La transition vers les énergies renouvelables crée des opportunités d’emploi mais exige une adaptation des compétences et des territoires.
-        La rénovation énergétique et l’économie circulaire sont des axes de travail pour les prochaines décennies.
-      </p>
-
-      <section class="photo-grid separated">
-        <img src="images/ia-economie-01.jpg" alt="Usine moderne (placeholder)">
-        <img src="images/ia-economie-02.jpg" alt="Startup (placeholder)">
-        <img src="images/ia-economie-03.jpg" alt="Bourse (placeholder)">
-      </section>
-
-      <h3>4. Inégalités économiques</h3>
-      <p>
-        L’analyse des inégalités monétaires et territoriales reste centrale. Les données montrent des divergences croissantes entre territoires,
-        ce qui nécessite des politiques territorialisées et des investissements ciblés.
-      </p>
-    </article>
-  </template>
-
-  <!-- CULTURE -->
-  <template id="tpl-culture">
-    <article class="section article-long">
-      <h2>Culture — Création, patrimoine et mondialisation</h2>
-
-      <p class="lede">
-        La culture occupe une place centrale : création contemporaine, industries culturelles, protection du patrimoine et diffusion internationale.
-      </p>
-
-      <h3>1. Industries créatives</h3>
-      <p>
-        Cinéma, musique, édition et arts visuels rencontrent de nouveaux défis : plateformes globales, monétisation et protection des droits d'auteur.
-        La France combine soutien public et stratégies d’exportation culturelle.
-      </p>
-
-      <h3>2. Patrimoine et musées</h3>
-      <p>
-        La gestion des grands sites et musées interroge la relation entre conservation et accessibilité. Les politiques de numérisation du patrimoine offrent
-        de nouvelles perspectives de diffusion mais demandent des ressources et une stratégie à long terme.
-      </p>
-
-      <section class="photo-grid separated large">
-        <img src="images/ia-culture-01.jpg" alt="Musée (placeholder)">
-        <img src="images/ia-culture-02.jpg" alt="Festival (placeholder)">
-        <img src="images/ia-culture-03.jpg" alt="Cinéma (placeholder)">
-        <img src="images/ia-culture-04.jpg" alt="Bibliothèque (placeholder)">
-      </section>
-
-      <h3>3. Numérique et accès</h3>
-      <p>
-        Les plateformes changent les modes de consommation culturelle : streaming, réseaux sociaux et médiation numérique redessinent la diffusion.
-        L’enjeu est d’assurer diversité et qualité tout en soutenant les acteurs locaux.
-      </p>
-    </article>
-  </template>
-
-  <!-- TIMELINE -->
-  <template id="tpl-timeline">
-    <article class="section article-long">
-      <h2>Timeline — Repères et jalons</h2>
-      <p class="lede">Chronologie commentée des principaux événements qui structurent le XXIᵉ siècle en France.</p>
-
-      <ol class="timeline-list">
-        <li>
-          <h4>2000–2007 : Globalisation et enjeux sociaux</h4>
-          <p>Dérégulations, intégration européenne et débats sociaux autour du marché du travail. Les nouvelles technologies se diffusent.</p>
-          <img src="images/ia-tl-2002.jpg" alt="Euro (placeholder)">
-        </li>
-
-        <li>
-          <h4>2008 : Crise financière mondiale</h4>
-          <p>Effets sur les politiques publiques, plans de relance et redébat sur le rôle de l’État.</p>
-          <img src="images/ia-tl-2008.jpg" alt="Crise (placeholder)">
-        </li>
-
-        <li>
-          <h4>2015 : Attentats et reconfiguration sécuritaire</h4>
-          <p>Impact sur les politiques de sécurité, débats sur les libertés et mémoire collective.</p>
-          <img src="images/ia-tl-2015.jpg" alt="Mémorial (placeholder)">
-        </li>
-
-        <li>
-          <h4>2018–2019 : Gilets Jaunes</h4>
-          <p>Mouvement social durable, question du pouvoir d'achat, débats institutionnels et territorialité.</p>
-          <img src="images/ia-tl-2018.jpg" alt="Gilets jaunes (placeholder)">
-        </li>
-
-        <li>
-          <h4>2020 : Pandémie de COVID-19</h4>
-          <p>Confinements, transformations du travail, priorités sanitaires et relance économique.</p>
-          <img src="images/ia-tl-2020.jpg" alt="Pandémie (placeholder)">
-        </li>
-      </ol>
-    </article>
-  </template>
-
-  <!-- GALERIE -->
-  <template id="tpl-galerie">
-    <article class="section article-long">
-      <h2>Galerie photographique</h2>
-      <p class="lede">Collection d’images-reportage : cliquez pour voir en grand (ouvrir localement).</p>
-
-      <div class="gallery-grid separated">
-        <!-- images locales (placeholders IA) -->
-        <img src="images/ia-gallery-01.jpg" alt="Galerie 1">
-        <img src="images/ia-gallery-02.jpg" alt="Galerie 2">
-        <img src="images/ia-gallery-03.jpg" alt="Galerie 3">
-        <img src="images/ia-gallery-04.jpg" alt="Galerie 4">
-        <img src="images/ia-gallery-05.jpg" alt="Galerie 5">
-        <img src="images/ia-gallery-06.jpg" alt="Galerie 6">
-        <img src="images/ia-gallery-07.jpg" alt="Galerie 7">
-        <img src="images/ia-gallery-08.jpg" alt="Galerie 8">
-      </div>
-
-      <p>Pour remplacer une image, placez votre fichier dans le dossier <code>/images/</code> et conservez le même nom de fichier.</p>
-    </article>
-  </template>
-
-  <!-- SOURCES -->
-  <template id="tpl-sources">
-    <article class="section article-long">
-      <h2>Sources & Bibliographie</h2>
-      <p class="lede">Références, recommandations de lecture et ressources essentielles pour approfondir.</p>
-
-      <h3>Principales sources institutionnelles</h3>
-      <ul>
-        <li>INSEE — Statistiques et analyses démographiques</li>
-        <li>Rapports parlementaires — Dossiers législatifs</li>
-        <li>Publications universitaires — CNRS, revues spécialisées</li>
-      </ul>
-
-      <h3>Presse et analyses</h3>
-      <p>Articles de la grande presse nationale (analyses, enquêtes) — utile pour la contextualisation et la chronologie.</p>
-
-      <h3>Ouvrages</h3>
-      <p>Sélection d'essais et d'ouvrages d'histoire contemporaine pour approfondir chaque thématique.</p>
-    </article>
-  </template>
-
-  <!-- INSTAGRAM (IG1 : réaliste) -->
-  <template id="tpl-instagram">
-    <article class="section article-long">
-      <h2>Le Révolutionniste — Profil</h2>
-
-      <div class="insta-top">
-        <img class="insta-avatar" src="images/ia-ig-avatar.jpg" alt="Avatar Le Révolutionniste">
-        <div class="insta-meta">
-          <h3 class="insta-name">Le Révolutionniste</h3>
-          <p class="insta-handle">@lerevolutionniste</p>
-          <p class="bio">
-            Récits, photographies et analyses sur la France contemporaine. Journal de terrain, archives et entretiens.
-            Projet étudiant — contributions et ressources.
-          </p>
-
-          <div class="insta-stats">
-            <div><strong>1 324</strong><span> publications</span></div>
-            <div><strong>18,9k</strong><span> abonnés</span></div>
-            <div><strong>421</strong><span> abonnements</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- STORIES -->
-      <div class="insta-stories separated">
-        <div class="story">
-          <img src="images/ia-ig-story-01.jpg" alt="Story 1">
-          <span>Archives</span>
-        </div>
-        <div class="story">
-          <img src="images/ia-ig-story-02.jpg" alt="Story 2">
-          <span>Reportages</span>
-        </div>
-        <div class="story">
-          <img src="images/ia-ig-story-03.jpg" alt="Story 3">
-          <span>Débats</span>
-        </div>
-        <div class="story">
-          <img src="images/ia-ig-story-04.jpg" alt="Story 4">
-          <span>Cartes</span>
-        </div>
-      </div>
-
-      <!-- TABS -->
-      <div class="insta-tabs separated">
-        <button class="tab active" data-tab="posts">Publications</button>
-        <button class="tab" data-tab="reels">Reels</button>
-        <button class="tab" data-tab="tags">Tags</button>
-      </div>
-
-      <!-- POSTS GRID (3-col) -->
-      <div class="insta-grid separated" id="insta-posts">
-        <!-- 12 posts: small images and captions, no external links -->
-        <div class="insta-post">
-          <img src="images/ia-ig-01.jpg" alt="Post 1">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 12 mars 2025 · Grandes manifestations : recueil de témoignages et chronologie. #société #mouvements</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-02.jpg" alt="Post 2">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 02 fév 2025 · Métropoles et reconversion industrielle. #territoires</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-03.jpg" alt="Post 3">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 23 jan 2025 · Patrimoine immatériel : exemples locaux. #culture</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-04.jpg" alt="Post 4">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 11 jan 2025 · Archives photo : lecture critique. #archives</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-05.jpg" alt="Post 5">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 28 déc 2024 · Climats locaux et réponses citoyennes. #écologie</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-06.jpg" alt="Post 6">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 05 déc 2024 · Innovation & emploi : terrains d'enquête. #économie</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-07.jpg" alt="Post 7">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 14 nov 2024 · Vie de quartier : récits. #société</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-08.jpg" alt="Post 8">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 30 oct 2024 · Festivals locaux. #culture</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-09.jpg" alt="Post 9">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 12 oct 2024 · Urbanisme : transformations. #urbanisme</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-10.jpg" alt="Post 10">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 01 sep 2024 · Portraits : acteurs culturels. #portrait</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-11.jpg" alt="Post 11">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 17 juil 2024 · Lieux de lecture et mémoire. #mémoire</p>
-        </div>
-        <div class="insta-post">
-          <img src="images/ia-ig-12.jpg" alt="Post 12">
-          <p class="caption"><strong>Le Révolutionniste</strong> — 05 juin 2024 · Débat local : compte-rendu. #débats</p>
-        </div>
-      </div>
-
-      <p class="muted small">Compte pédagogique et éditorial pour usage scolaire.</p>
-    </article>
-  </template>
-
-  <script src="script.js"></script>
 </body>
 </html>
