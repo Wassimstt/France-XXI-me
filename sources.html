@@ -2,57 +2,63 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Sources</title>
+    <title>Sources – France au XXIe siècle</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>France au XXIe siècle</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="instagram.html">Instagram</a>
-            <a href="sources.html">Sources</a>
+<header class="header">
+    <div class="header-inner">
+        <h1 class="site-title">FRANCE AU XXI<sup>e</sup> SIÈCLE</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="timeline.html" class="nav-link">Timeline</a>
+            <a href="galerie.html" class="nav-link">Galerie</a>
+            <a href="instagram.html" class="nav-link">Instagram</a>
+            <a href="sources.html" class="nav-link active">Sources</a>
         </nav>
     </div>
 </header>
 
-<section>
-    <h2>Sources et bibliographie</h2>
+<main class="content">
 
-    <p>
-        Ce travail s’inspire de recherches historiques, de publications universitaires, de données officielles et
-        d’analyses journalistiques de référence. Les sources suivantes ont été mobilisées pour élaborer un panorama
-        rigoureux de la France au XXIe siècle.
-    </p>
+    <article class="article">
 
-    <h3>Ouvrages</h3>
-    <ul>
-        <li>Rosanvallon, Pierre — *La Société des égaux*</li>
-        <li>Todd, Emmanuel — *Qui est Charlie ?*</li>
-        <li>Tocqueville revisité — *Démocratie et modernité*</li>
-    </ul>
+        <h2 class="article-title">Sources et références utilisées</h2>
 
-    <h3>Institutions</h3>
-    <ul>
-        <li>INSEE — bases statistiques et études sociales</li>
-        <li>CNRS — publications et travaux de recherche</li>
-        <li>Ministère de la Culture — bilans annuels</li>
-        <li>Commission Européenne — rapports économiques</li>
-    </ul>
+        <p class="article-text">
+            Ce site repose sur un ensemble de sources historiques, universitaires et institutionnelles permettant
+            d’établir une vision rigoureuse et nuancée de la France contemporaine. Les textes ont été rédigés dans une
+            perspective pédagogique destinée aux étudiants et aux passionnés d’histoire.
+        </p>
 
-    <h3>Usage des images</h3>
-    <p>
-        Les images sont des placeholders situés dans le dossier <strong>/images</strong>.
-    </p>
-</section>
+        <h3 class="section-title">Ouvrages de référence</h3>
+        <ul class="article-list">
+            <li>Rosanvallon, Pierre – <em>La Société des Égaux</em></li>
+            <li>Fourquet, Jérôme – <em>L’Archipel Français</em></li>
+            <li>Bourdieu, Pierre – <em>Sur la Télévision</em></li>
+        </ul>
 
-<footer>
-    <p>Projet étudiant – Histoire de la France contemporaine</p>
-</footer>
+        <h3 class="section-title">Institutions</h3>
+        <ul class="article-list">
+            <li>INSEE — données démographiques et sociales</li>
+            <li>Ministère de l’Économie — statistiques et rapports</li>
+            <li>CNRS — publications scientifiques</li>
+        </ul>
+
+        <h3 class="section-title">Images</h3>
+        <p class="article-text">
+            Les images sont des **placeholders** situés dans le dossier <strong>/images</strong>.  
+            Vous pouvez remplacer chaque fichier par une image de votre choix portant le même nom.
+        </p>
+
+    </article>
+
+</main>
+
+<footer class="footer">Projet étudiant – Histoire de la France contemporaine</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
