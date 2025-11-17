@@ -1,278 +1,120 @@
-/* -------------------------------
-   STYLE GLOBAL "LE MONDE MODERNE"
-   Minimaliste, bleu foncé, lignes fines
----------------------------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;600&display=swap');
-
-:root {
-    --bleu-titre: #1a3a5f;
-    --bleu-texte: #163559;
-    --bleu-clair: #e6eef7;
-    --noir: #222;
-    --gris: #666;
-    --fond: #ffffff;
-    --max-width: 1100px;
-}
-
-/* -------------------------------
-   RESET & GLOBAL
----------------------------------*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ------------------------------
+   STYLE GÉNÉRAL STYLE LE MONDE
+--------------------------------*/
 
 body {
-    font-family: "Merriweather", serif;
-    background: var(--fond);
-    color: var(--noir);
-    line-height: 1.8;
-    padding-top: 140px; /* espace sous le header */
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #111;
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.7;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 25px auto;
-    border-radius: 4px;
+/* ------------------------------
+   HEADER / NAVIGATION
+--------------------------------*/
+
+.header {
+    background: #ffffff;
+    border-bottom: 2px solid #e2e2e2;
+    padding: 20px 0;
 }
 
-h1, h2, h3 {
-    font-family: "Lora", serif;
-    color: var(--bleu-titre);
+.header-inner {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 2.6rem;
+    margin: 0 0 15px 0;
+    color: #003366;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.nav-link {
+    font-family: "Arial", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #003366;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    border-bottom: 2px solid #003366;
+}
+
+/* ------------------------------
+   CONTENU PRINCIPAL
+--------------------------------*/
+
+.content {
+    width: 52%;
+    margin: 50px auto;
+}
+
+/* ARTICLE */
+.article-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
     margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 2.6rem;
-}
-
-h2 {
-    font-size: 1.9rem;
-    border-bottom: 1px solid var(--bleu-clair);
-    padding-bottom: 6px;
-}
-
-h3 {
-    font-size: 1.4rem;
-}
-
-p {
-    margin: 15px 0;
-    font-size: 1.05rem;
-    color: var(--noir);
-}
-
-a {
-    color: var(--bleu-titre);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* -------------------------------
-   HEADER & NAVIGATION
----------------------------------*/
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
+.article-hero {
     width: 100%;
-    background: var(--fond);
-    border-bottom: 2px solid var(--bleu-clair);
-    padding: 25px 0;
-    z-index: 1000;
-}
-
-header .container {
-    width: var(--max-width);
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav a {
-    margin-left: 20px;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: var(--gris);
-}
-
-/* -------------------------------
-   STRUCTURES DES SECTIONS
----------------------------------*/
-
-section {
-    width: var(--max-width);
-    margin: 50px auto;
-    padding: 20px 0;
-}
-
-/* Texte + image séparés proprement */
-.section-block {
-    margin-bottom: 60px;
-}
-
-.section-block img {
-    margin-top: 20px;
-}
-
-/* -------------------------------
-   PAGE : GALERIE
----------------------------------*/
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 18px;
-    margin-top: 30px;
-}
-
-.gallery-grid img {
-    height: 240px;
-    object-fit: cover;
+    height: auto;
+    margin: 20px 0 25px 0;
     border-radius: 3px;
 }
 
-/* -------------------------------
-   PAGE : TIMELINE
----------------------------------*/
-
-.timeline {
-    width: var(--max-width);
-    margin: auto;
-}
-
-.event {
-    border-left: 3px solid var(--bleu-titre);
-    padding-left: 20px;
-    margin-bottom: 60px;
-}
-
-.event h3 {
-    margin-bottom: 10px;
-}
-
-.event img {
-    margin: 15px 0;
-    height: 260px;
-    object-fit: cover;
-}
-
-/* -------------------------------
-   PAGE : INSTAGRAM (IG1 RÉALISTE)
----------------------------------*/
-
-.instagram-container {
-    width: 480px;
-    margin: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
-.ig-header {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-
-.ig-header img {
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
-    margin-right: 12px;
-}
-
-.ig-username {
-    font-weight: bold;
-}
-
-.ig-bio {
-    padding: 0 15px 15px 15px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.ig-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.ig-posts-grid img {
+.article-image {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    margin: 30px 0;
+    border-radius: 3px;
 }
 
-.ig-post {
-    border-bottom: 1px solid #eee;
+.article-text {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
 }
 
-.ig-post img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+/* SECTIONS */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #003366;
 }
 
-.ig-post .legend {
-    padding: 10px 15px;
-    font-size: 0.95rem;
+.article-list {
+    margin-left: 20px;
+    font-size: 1rem;
 }
 
-.ig-actions {
-    padding: 10px 15px;
-    font-size: 1.2rem;
-}
-
-/* -------------------------------
+/* ------------------------------
    FOOTER
----------------------------------*/
+--------------------------------*/
 
-footer {
-    background: var(--bleu-clair);
-    padding: 20px 0;
-    margin-top: 60px;
-}
-
-footer p {
+.footer {
+    margin-top: 80px;
+    padding: 35px;
     text-align: center;
-    color: var(--bleu-texte);
+    background: #f4f4f4;
+    font-size: 0.9rem;
+    color: #333;
 }
 
-/* -------------------------------
-   RESPONSIVE
----------------------------------*/
-
-@media (max-width: 900px) {
-    section {
-        width: 90%;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .instagram-container {
-        width: 100%;
-    }
-}
-
-@media (max-width: 580px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-}
