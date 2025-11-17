@@ -1,5 +1,5 @@
-// Petit routeur simple basé sur templates + navigation hash
-(function () {
+// Tiny template router: loads templates into #app based on hash routes
+(function(){
   const app = document.getElementById('app');
   const templates = {};
   document.querySelectorAll('template').forEach(t => templates[t.id.replace('tpl-','')] = t);
@@ -17,20 +17,29 @@
     app.innerHTML = '';
     app.appendChild(clone);
     setActiveLink(page);
-    // small UX: scroll to top when page changes
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // optional: attach click handlers for large images to open in new tab
+    app.querySelectorAll('.photo-grid a, .gallery-grid a').forEach(a => {
+      a.addEventListener('click', (ev) => {
+        // default opens in new tab via target="_blank" in template links
+      });
+    });
   }
 
-  // navigation via data-goto buttons
-  document.body.addEventListener('click', function (e) {
-    const g = e.target.closest('[data-goto]');
-    if (g) {
-      const p = g.getAttribute('data-goto');
-      location.hash = '#/' + p;
-    }
+  // handle clicks on menu anchors
+  document.body.addEventListener('click', function(e){
+    const a = e.target.closest('[data-goto]');
+    if (a) { e.preventDefault(); const p = a.getAttribute('data-goto'); location.hash = '#/' + p; return; }
   });
 
-  // initial load and hash change handling
+  document.querySelectorAll('.main-nav a').forEach(a => {
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const page = a.dataset.page || 'home';
+      location.hash = '#/' + page;
+    });
+  });
+
   function resolveHash() {
     const h = location.hash.replace(/^#\/?/, '');
     const page = h || 'home';
@@ -38,15 +47,5 @@
   }
 
   window.addEventListener('hashchange', resolveHash);
-  // initial active link highlight on nav clicks
-  document.querySelectorAll('.main-nav a').forEach(a => {
-    a.addEventListener('click', (ev) => {
-      ev.preventDefault();
-      const pg = a.dataset.page || 'home';
-      location.hash = '#/' + pg;
-    });
-  });
-
-  // start
   resolveHash();
 })();
