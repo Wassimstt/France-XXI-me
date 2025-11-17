@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <title>Instagram – Le Révolutionniste</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>France au XXIe siècle</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="instagram.html">Instagram</a>
-            <a href="sources.html">Sources</a>
+<header class="header">
+    <div class="header-inner">
+        <h1 class="site-title">FRANCE AU XXI<sup>e</sup> SIÈCLE</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="timeline.html" class="nav-link">Timeline</a>
+            <a href="galerie.html" class="nav-link">Galerie</a>
+            <a href="instagram.html" class="nav-link active">Instagram</a>
+            <a href="sources.html" class="nav-link">Sources</a>
         </nav>
     </div>
 </header>
 
-<section>
-    <h2>Compte Instagram – Le Révolutionniste</h2>
+<main class="content">
 
-    <div class="instagram-container">
+    <article class="article">
+
+        <h2 class="article-title">Compte Instagram : Le Révolutionniste</h2>
 
         <div class="ig-header">
-            <img src="images/profil.jpg" alt="Profil">
+            <img src="images/ig-profil.jpg" class="ig-profil" alt="">
             <div>
                 <div class="ig-username">le_revolutionniste</div>
                 <div class="ig-name">Le Révolutionniste</div>
+                <div class="ig-bio">
+                    Chroniques sociales & politiques du XXIe siècle  
+                    🇫🇷 Analyse – Sociologie – Société  
+                    📰 Observateur du monde contemporain
+                </div>
             </div>
-        </div>
-
-        <div class="ig-bio">
-            Observateur du XXIe siècle • Chroniques sociales et politiques  
-            🇫🇷 Entre crises, débats et innovations.  
-            📚 Histoire – Société – Identité  
         </div>
 
         <div class="ig-posts-grid">
@@ -46,30 +47,29 @@
         </div>
 
         <div class="ig-post">
-            <img src="images/ig-post-01.jpg" alt="">
-            <div class="ig-actions">❤️ 248</div>
-            <div class="legend">
-                Manifestation à Paris. Les tensions sociales du XXIe siècle mettent en lumière les fractures du territoire
-                et la nécessité d’un renouveau démocratique. #France #Société #Politique
-            </div>
+            <img src="images/ig-post-01.jpg" class="ig-post-img" alt="">
+            <div class="ig-actions">❤️ 342 likes</div>
+            <p class="article-text">
+                Paris, 2023 — Les mobilisations sociales montrent une jeunesse politisée et attentive aux enjeux
+                démocratiques. Les réseaux sociaux deviennent un espace de mobilisation inédit.
+            </p>
         </div>
 
         <div class="ig-post">
-            <img src="images/ig-post-02.jpg" alt="">
-            <div class="ig-actions">❤️ 317</div>
-            <div class="legend">
-                L’avenir de la jeunesse française passe par une transformation profonde de l’éducation et de l’accès à
-                l’information. #Jeunesse #Éducation #Avenir
-            </div>
+            <img src="images/ig-post-02.jpg" class="ig-post-img" alt="">
+            <div class="ig-actions">❤️ 418 likes</div>
+            <p class="article-text">
+                Éducation, numérique et réformes successives redéfinissent le rapport des jeunes Français au savoir
+                et à l’avenir. Une génération en quête de repères.
+            </p>
         </div>
 
-    </div>
+    </article>
 
-</section>
+</main>
 
-<footer>
-    <p>Projet étudiant – Histoire de la France contemporaine</p>
-</footer>
+<footer class="footer">Projet étudiant – Histoire de la France contemporaine</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
