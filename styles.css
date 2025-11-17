@@ -1,5 +1,5 @@
 /* --------------------------------------------------
-   STYLE GLOBAL – Police, couleurs, structure
+   STYLE GLOBAL
 -------------------------------------------------- */
 
 body {
@@ -11,13 +11,13 @@ body {
 }
 
 /* --------------------------------------------------
-   HEADER + HERO (bannière moderne avec image)
+   HERO + HEADER
 -------------------------------------------------- */
 
 .hero {
     position: relative;
     height: 60vh;
-    background: url("URL_IMAGE_HEADER") center/cover no-repeat;
+    background: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,49 +26,38 @@ body {
 
 .hero .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.45);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
 }
 
 .hero-content {
     position: relative;
     color: white;
     z-index: 1;
-    max-width: 700px;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 .btn {
-    background: #ffffff;
+    background: white;
     color: #003366;
-    padding: 12px 24px;
+    padding: 12px 22px;
+    margin: 5px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    display: inline-block;
 }
 
-.btn:hover {
-    background: #003366;
-    color: #ffffff;
+.insta-btn {
+    background: #d62976;   /* Couleur Instagram */
+    color: white;
+}
+
+.insta-btn:hover {
+    background: #b12263;
 }
 
 /* --------------------------------------------------
-   MENU (navbar moderne)
+   NAVBAR
 -------------------------------------------------- */
 
 .navbar {
@@ -80,8 +69,6 @@ body {
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -91,8 +78,6 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.05rem;
-    transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -105,19 +90,16 @@ body {
 
 .section {
     background: white;
-    width: 90%;
     margin: 40px auto;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    border-radius: 10px;
 }
 
 .section h2 {
-    color: #003366;
-    margin-bottom: 15px;
     border-left: 4px solid #003366;
     padding-left: 10px;
-    font-size: 1.9rem;
+    color: #003366;
 }
 
 /* --------------------------------------------------
@@ -126,11 +108,10 @@ body {
 
 img {
     width: 100%;
+    border-radius: 10px;
     max-width: 850px;
     display: block;
-    margin: 25px auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin: 20px auto;
 }
 
 /* --------------------------------------------------
@@ -140,30 +121,6 @@ img {
 footer {
     background: #003366;
     color: white;
-    padding: 20px;
     text-align: center;
-    margin-top: 50px;
-}
-
-/* --------------------------------------------------
-   GALERIE
--------------------------------------------------- */
-
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.img-container img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* --------------------------------------------------
-   SCROLL DOUX
--------------------------------------------------- */
-
-html {
-    scroll-behavior: smooth;
+    padding: 20px;
 }
