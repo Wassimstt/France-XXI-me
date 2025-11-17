@@ -1,0 +1,15 @@
+/* Version imprimée : pas de couleurs sombres, juste lisible */
+body {
+    font-size: 14px;
+    background: white;
+    color: black;
+}
+
+header, footer, nav {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    page-break-inside: avoid;
+}
