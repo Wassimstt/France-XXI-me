@@ -72,9 +72,10 @@ body {
 -------------------------------------------------- */
 
 .navbar {
-    background: #003366;
-    padding: 10px 0;
+    background: linear-gradient(90deg, #002855, #003b7a);
+    padding: 12px 0;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 .navbar ul {
@@ -145,7 +146,7 @@ footer {
 }
 
 /* --------------------------------------------------
-   GALERIE (si tu veux l'utiliser)
+   GALERIE
 -------------------------------------------------- */
 
 .img-container {
