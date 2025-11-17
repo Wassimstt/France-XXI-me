@@ -2,87 +2,103 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Timeline – France XXIe siècle</title>
+    <title>Timeline – France au XXIe siècle</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>France au XXIe siècle</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="instagram.html">Instagram</a>
-            <a href="sources.html">Sources</a>
+<header class="header">
+    <div class="header-inner">
+        <h1 class="site-title">FRANCE AU XXI<sup>e</sup> SIÈCLE</h1>
+
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="timeline.html" class="nav-link active">Timeline</a>
+            <a href="galerie.html" class="nav-link">Galerie</a>
+            <a href="instagram.html" class="nav-link">Instagram</a>
+            <a href="sources.html" class="nav-link">Sources</a>
         </nav>
     </div>
 </header>
 
-<section class="timeline">
-    <h2>Événements marquants du XXIe siècle</h2>
+<main class="content">
 
-    <div class="event">
-        <h3>2002 – Passage à l’euro</h3>
-        <img src="images/timeline-01.jpg" alt="Passage à l'euro">
-        <p>
-            Le passage à l’euro constitue l’un des tournants majeurs du siècle. Adopté par douze pays européens, il
-            symbolise un approfondissement sans précédent du projet européen. Pour la France, l’euro modifie le rapport
-            à la monnaie, les habitudes économiques et les perceptions de souveraineté.
-        </p>
-        <p>
-            Les débats sur sa pertinence ont été vifs, opposant défenseurs de l’intégration et partisans d’un retour au
-            franc. La monnaie unique devient rapidement un élément structurant de la vie économique française.
-        </p>
-    </div>
+    <article class="article">
 
-    <div class="event">
-        <h3>2015 – Attentats de Paris</h3>
-        <img src="images/timeline-02.jpg" alt="Attentats 2015">
-        <p>
-            L’année 2015 marque un traumatisme national avec les attentats de janvier et de novembre. Ces attaques
-            bouleversent profondément la société française, renforçant le sentiment de vulnérabilité et rendant la lutte
-            antiterroriste prioritaire.
-        </p>
-        <p>
-            Elles provoquent également un débat intense sur la cohésion nationale, la sécurité et le rapport aux libertés
-            publiques, transformant durablement les politiques de surveillance et de prévention.
-        </p>
-    </div>
+        <h2 class="article-title">Chronologie : comprendre les grandes étapes du XXI<sup>e</sup> siècle</h2>
 
-    <div class="event">
-        <h3>2018 – Mouvement des Gilets Jaunes</h3>
-        <img src="images/timeline-03.jpg" alt="Gilets Jaunes">
-        <p>
-            Né d’une contestation contre les taxes sur les carburants, le mouvement des Gilets Jaunes révèle des fractures
-            territoriales et sociales profondes. Les manifestations, parfois violentes, remettent au centre du débat
-            public la question du pouvoir d’achat et de la représentativité politique.
+        <p class="article-text">
+            Le XXI<sup>e</sup> siècle français est marqué par une succession d’événements qui ont bouleversé le pays.
+            Crises économiques, attentats, réformes institutionnelles, mouvements sociaux, innovations technologiques :
+            chaque étape a contribué à remodeler durablement la société. Cette timeline retrace les moments qui ont
+            façonné la France contemporaine.
         </p>
-        <p>
-            Le mouvement s’étend sur plusieurs mois et provoque un débat national inédit sur la démocratie directe et
-            les réformes institutionnelles.
-        </p>
-    </div>
 
-    <div class="event">
-        <h3>2020 – Crise du COVID-19</h3>
-        <img src="images/timeline-04.jpg" alt="Covid-19">
-        <p>
-            La pandémie bouleverse l’ensemble de la société française : confinement, télétravail, hôpitaux saturés,
-            mesures sanitaires controversées. La crise met en lumière les forces et les faiblesses du système de santé.
-        </p>
-        <p>
-            Elle accélère la numérisation du travail, transforme les modes de consommation et redéfinit les priorités
-            sociales, politiques et économiques du pays.
-        </p>
-    </div>
+        <!-- 2002 -->
+        <section class="article-section">
+            <h3 class="section-title">2002 — Passage à l’euro</h3>
+            <img src="images/timeline-2002.jpg" class="article-image" alt="">
+            <p class="article-text">
+                L’année 2002 marque l'introduction concrète de l’euro dans la vie quotidienne. La France change de monnaie
+                pour adopter l’euro, un événement historique qui modifie les habitudes économiques et symbolise une
+                intégration européenne accrue. Ce basculement provoque débats, inquiétudes et espoirs quant à la souveraineté.
+            </p>
+            <p class="article-text">
+                Les premières années révèlent des difficultés d’adaptation et une perception d’inflation, alimentant un débat
+                qui traversera tout le siècle sur le rôle de l’Europe dans les politiques économiques nationales.
+            </p>
+        </section>
 
-</section>
+        <!-- 2005 -->
+        <section class="article-section">
+            <h3 class="section-title">2005 — Référendum Constitution Européenne</h3>
+            <img src="images/timeline-2005.jpg" class="article-image" alt="">
+            <p class="article-text">
+                Le rejet par référendum du traité constitutionnel européen marque un tournant. Une majorité de Français
+                exprime un malaise profond face à l’Union européenne, perçue comme technocratique et éloignée des réalités
+                sociales. Cet événement annonce une montée des critiques envers la globalisation.
+            </p>
+        </section>
 
-<footer>
-    <p>Projet étudiant – Histoire de la France contemporaine</p>
-</footer>
+        <!-- 2015 -->
+        <section class="article-section">
+            <h3 class="section-title">2015 — Une année noire : les attentats</h3>
+            <img src="images/timeline-2015.jpg" class="article-image" alt="">
+            <p class="article-text">
+                Les attentats de janvier et de novembre 2015 bouleversent la France. Ils suscitent une vague d’émotion
+                mondiale et modifient durablement les politiques sécuritaires. La question du vivre-ensemble devient centrale.
+            </p>
+        </section>
+
+        <!-- 2018 -->
+        <section class="article-section">
+            <h3 class="section-title">2018 — Le mouvement des Gilets Jaunes</h3>
+            <img src="images/timeline-2018.jpg" class="article-image" alt="">
+            <p class="article-text">
+                Ce mouvement populaire, né sur les réseaux sociaux, témoigne des fractures territoriales et sociales.
+                Les revendications portent sur le pouvoir d’achat, la fiscalité, la représentativité et l’avenir des services
+                publics. Les rond-points occupés deviennent l’emblème d’une colère inédite.
+            </p>
+        </section>
+
+        <!-- 2020 -->
+        <section class="article-section">
+            <h3 class="section-title">2020 — La pandémie de COVID-19</h3>
+            <img src="images/timeline-2020.jpg" class="article-image" alt="">
+            <p class="article-text">
+                La crise sanitaire impacte tous les aspects de la vie française : confinement, hôpitaux en tension,
+                télétravail, crise économique. Elle révèle les fragilités du système de santé mais accélère aussi la transition
+                numérique. Le pays redéfinit son rapport au travail, au soin et à la solidarité.
+            </p>
+        </section>
+
+    </article>
+
+</main>
+
+<footer class="footer">Projet étudiant – Histoire de la France contemporaine</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
