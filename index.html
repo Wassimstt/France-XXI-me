@@ -1,83 +1,329 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>France au XXIe siècle</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>La France au XXIᵉ siècle — Projet étudiant</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- HERO -->
-<header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>La France au XXIe Siècle</h1>
-        <p>Analyse historique, sociale et culturelle</p>
-        <a href="#societe" class="btn">Découvrir</a>
-        <a href="instagram.html" class="btn insta-btn">Voir le compte Instagram</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>La France au XXIᵉ siècle</h1>
+        <p class="tag">Projet étudiant — Analyse, contexte et illustration</p>
+      </div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#/" data-page="home">Accueil</a></li>
+          <li><a href="#/politique" data-page="politique">Politique</a></li>
+          <li><a href="#/societe" data-page="societe">Société</a></li>
+          <li><a href="#/economie" data-page="economie">Économie</a></li>
+          <li><a href="#/culture" data-page="culture">Culture</a></li>
+          <li><a href="#/bibliographie" data-page="bibliographie">Sources</a></li>
+          <li><a href="#/instagram" data-page="instagram">Le Révolutionniste (Instagram)</a></li>
+        </ul>
+      </nav>
     </div>
-</header>
+  </header>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <ul>
-        <li><a href="#societe">Société</a></li>
-        <li><a href="#politique">Politique</a></li>
-        <li><a href="#economie">Économie</a></li>
-        <li><a href="#culture">Culture</a></li>
-        <li><a href="instagram.html">Instagram</a></li>
-    </ul>
-</nav>
+  <main id="app" class="container">
+    <!-- CONTENT WILL BE LOADED HERE BY JS -->
+  </main>
 
-<!-- SECTION 1 -->
-<section id="societe" class="section">
-    <h2>Société</h2>
-    <p>
-        Le XXIe siècle en France est marqué par des transformations profondes : mobilités sociales,
-        mouvements citoyens, débats autour de l'identité nationale et mutations démographiques.
-        Les grandes marches, les manifestations telles que celles contre le CPE, les Gilets Jaunes
-        ou encore les mobilisations écologistes structurent le paysage social contemporain.
-    </p>
-    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Manifestation France XXIe siècle">
-</section>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 — Projet étudiant. Thème : La France au XXIᵉ siècle — Bleu & Blanc (style magazine).</p>
+      <p>Images : Unsplash (libres) — Remplacez par vos propres images si nécessaire.</p>
+    </div>
+  </footer>
 
-<!-- SECTION 2 -->
-<section id="politique" class="section">
-    <h2>Politique</h2>
-    <p>
-        L’évolution politique française depuis 2000 se caractérise par une recomposition du paysage partisan,
-        la montée du débat européen, la modernisation de l’État et l’adaptation à une société numérique.
-        Les présidences successives ont tenté de répondre aux défis sécuritaires, sociaux et économiques.
-    </p>
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Elysée XXIe siècle">
-</section>
+  <!-- TEMPLATES: each template represents a "page" -->
+  <template id="tpl-home">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Comprendre la France au XXIᵉ siècle</h2>
+        <p class="lead">
+          Un panorama complet des transformations politiques, sociales, culturelles et économiques.
+          Ce projet compile analyses, visuels et récits pour restituer la complexité de notre époque.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" data-goto="politique">Lire la rubrique Politique</a>
+          <a class="btn outline" data-goto="societe">Explorer la Société</a>
+        </div>
+      </div>
+      <div class="hero-photos">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=80" alt="France moderne skyline">
+        <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=80" alt="Culture française">
+      </div>
+    </section>
 
-<!-- SECTION 3 -->
-<section id="economie" class="section">
-    <h2>Économie</h2>
-    <p>
-        La France, prise dans la mondialisation, doit concilier compétitivité, transition écologique
-        et justice sociale. L'économie numérique transforme profondément le travail, la production
-        et les services.
-    </p>
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Économie moderne France">
-</section>
+    <section class="intro section">
+      <h3>Pourquoi ce projet ?</h3>
+      <p>
+        Ce travail vise à offrir une synthèse historique et journalistique — à la manière d'une grande rédaction —,
+        sur les enjeux qui traversent la France depuis 2000 : recomposition politique, mutation sociale,
+        révolution numérique et repositionnement international. Les analyses s'appuient sur des évènements clés,
+        des données publiques et des témoignages.
+      </p>
+    </section>
 
-<!-- SECTION 4 -->
-<section id="culture" class="section">
-    <h2>Culture</h2>
-    <p>
-        Le XXIe siècle marque l’explosion de nouvelles expressions culturelles : cinéma indépendant,
-        multiplication des festivals, artistes engagés, littérature hybride. Les plateformes numériques
-        transforment l’accès à la création.
-    </p>
-    <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade" alt="Culture France">
-</section>
+    <section class="section grid-3">
+      <article>
+        <h4>Repères chronologiques</h4>
+        <ul>
+          <li><strong>2000–2007</strong> : Globalisation et débats sociaux.</li>
+          <li><strong>2008</strong> : Crise financière mondiale, politiques d'austérité.</li>
+          <li><strong>2015</strong> : Attentats et transformations sécuritaires.</li>
+          <li><strong>2018–2019</strong> : Mouvement des Gilets Jaunes.</li>
+          <li><strong>2020</strong> : Crise sanitaire, réorganisation des services publics.</li>
+        </ul>
+      </article>
+      <article>
+        <h4>Enjeux majeurs</h4>
+        <p>Transition écologique, fractures territoriales, mutations du travail, place de la France dans l'Europe et le monde.</p>
+      </article>
+      <article>
+        <h4>À propos des images</h4>
+        <p>Les photos illustratives viennent d’Unsplash (liens intégrés). Tu peux remplacer chaque URL par un lien GitHub "raw" ou un fichier local.</p>
+      </article>
+    </section>
+  </template>
 
-<footer>
-    © 2025 - Projet scolaire. Page Instagram fictive : Le Révolutionniste.
-</footer>
+  <template id="tpl-politique">
+    <article class="section">
+      <h2>Politique — Recomposition et débats</h2>
 
-<script src="script.js"></script>
+      <p class="lede">
+        La vie politique française a été profondément transformée au XXIᵉ siècle. Entre renouvellement des partis,
+        personnalisation du pouvoir et crise de représentation, la scène politique connaît une recomposition durable.
+      </p>
+
+      <div class="big-photo">
+        <img src="https://images.unsplash.com/photo-1505083044009-6cbed76f3b4b?auto=format&fit=crop&w=1600&q=80" alt="Assemblée nationale">
+      </div>
+
+      <h3>Partis et élections</h3>
+      <p>
+        Le paysage partisan, autrefois dominé par la bipolarisation droite/gauche, a vu l'émergence de nouveaux mouvements.
+        L'élection présidentielle reste un moment clé : personnalisation des campagnes, couverture médiatique abondante,
+        usages intensifs des réseaux sociaux pour capter l'attention des électeurs.
+      </p>
+
+      <h3>Sécurité, lois et mémoire</h3>
+      <p>
+        Les attentats de 2015 ont modifié le rapport au politique et au sécuritaire. Les lois antiterroristes, la surveillance
+        numérique et les débats sur les libertés individuelles constituent des enjeux permanents. Parallèlement, la mémoire
+        des conflits et des crises alimente les discours publics.
+      </p>
+
+      <h3>Encadré : grandes réformes</h3>
+      <ul>
+        <li>Réformes du marché du travail</li>
+        <li>Réformes des retraites (débats et manifestations)</li>
+        <li>Politiques climatiques - plans de transition</li>
+      </ul>
+
+      <section class="photo-grid">
+        <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80" alt="Débat public">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80" alt="Manifestation">
+        <img src="https://images.unsplash.com/photo-1508087618792-2b4a1bdc6fb1?auto=format&fit=crop&w=800&q=80" alt="Urnes de vote">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Congrès politique">
+      </section>
+
+    </article>
+  </template>
+
+  <template id="tpl-societe">
+    <article class="section">
+      <h2>Société — Mutations et tensions</h2>
+      <p class="lede">
+        Société connectée, inégalités territoriales, mobilisations citoyennes et discussions identitaires : la France vit des changements profonds.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <h3>Démographie et territoires</h3>
+          <p>
+            Le vieillissement, l’urbanisation et la désindustrialisation redéfinissent les espaces. Les métropoles attirent, tandis que certains territoires
+            ruraux ou périurbains connaissent une érosion des services publics. Les questions d’accessibilité et d’égalité territoriale deviennent centrales.
+          </p>
+
+          <h3>Travail et numérique</h3>
+          <p>
+            Le travail se transforme : télétravail généralisé après 2020 dans certains secteurs, précarisation de plateformes, nécessité de formation continue.
+            L'automatisation questionne les emplois qualifiés comme non qualifiés.
+          </p>
+        </div>
+        <div>
+          <div class="card">
+            <h4>Enjeux contemporains</h4>
+            <ul>
+              <li>Éducation et inégalités</li>
+              <li>Santé publique et systèmes hospitaliers</li>
+              <li>Logement et coût de la vie</li>
+              <li>Mobilisations sociales et revendications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="photo-grid large">
+        <!-- beaucoup d'images -->
+        <img src="https://images.unsplash.com/photo-1508385082359-f3f91f068a1f?auto=format&fit=crop&w=900&q=80" alt="Ville et société">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=80" alt="Jeunes connectés">
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=80" alt="Manifestation">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80" alt="Quartier urbain">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Travail et bureaux">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=80" alt="Soin et hôpital">
+      </section>
+
+      <h3>Focus : Movements citoyens</h3>
+      <p>
+        Des mobilisations locales aux mouvements nationaux, les formes d'action citoyenne se diversifient : pétitions en ligne, manifestations,
+        occupations et actions culturelles. Ces pratiques réinterrogent la représentation et la légitimité des institutions.
+      </p>
+    </article>
+  </template>
+
+  <template id="tpl-economie">
+    <article class="section">
+      <h2>Économie — Compétitivité et transition</h2>
+      <p class="lede">
+        L'économie française navigue entre mondialisation, transition écologique et impératifs sociaux. L'innovation côtoie la précarité.
+      </p>
+
+      <div class="big-photo">
+        <img src="https://images.unsplash.com/photo-1542224566-3d3b8d9d9b1f?auto=format&fit=crop&w=1600&q=80" alt="Économie moderne">
+      </div>
+
+      <h3>Startups et French Tech</h3>
+      <p>
+        La French Tech illustre l'essor de pôles d'innovation, financements et incubateurs. Les PME et startups côtoient des géants industriels et des clusters académiques.
+      </p>
+
+      <h3>Crises et ajustements</h3>
+      <p>
+        Les chocs (2008, 2020) ont révélé les vulnérabilités : chaînes d'approvisionnement, dette publique, tension sur l'emploi. Les réponses oscillent entre relance,
+        soutien aux secteurs clés et réforme.
+      </p>
+
+      <section class="photo-grid">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Bourse">
+        <img src="https://images.unsplash.com/photo-1505691723518-36a5b37b1c5d?auto=format&fit=crop&w=800&q=80" alt="Usine moderne">
+        <img src="https://images.unsplash.com/photo-1542224566-3d3b8d9d9b1f?auto=format&fit=crop&w=800&q=80" alt="Workspace">
+      </section>
+
+      <h3>Transition écologique et emplois</h3>
+      <p>
+        Le virage vert crée des opportunités (énergies, rénovation), mais implique une adaptation des compétences et des territoires. Les politiques publiques tentent de concilier ambition et justice sociale.
+      </p>
+    </article>
+  </template>
+
+  <template id="tpl-culture">
+    <article class="section">
+      <h2>Culture — Création et diffusion</h2>
+      <p class="lede">
+        La culture française demeure vivante et diverse : festivals, cinéma, arts visuels, recherche et bibliothèques.
+      </p>
+
+      <section class="photo-grid large">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Festival">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Cinéma">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80" alt="Musique">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="Littérature">
+      </section>
+
+      <h3>Numérique et création</h3>
+      <p>
+        Plateformes et réseaux métamorphosent l’accès à la culture. L’enjeu est double : soutenir la création locale et s’adapter à des usages mondialisés.
+      </p>
+
+      <h3>Encadré : protection culturelle</h3>
+      <p>
+        La France maintient des politiques de soutien (aides, quotas, subventions) pour préserver l'écosystème culturel face aux géants internationaux.
+      </p>
+    </article>
+  </template>
+
+  <template id="tpl-bibliographie">
+    <article class="section">
+      <h2>Sources & Bibliographie</h2>
+      <p>
+        Sélection indicative pour approfondir : rapports de l'INSEE, articles du Monde, rapports du Ministère de la Culture,
+        études universitaires, notes d'ONG environnementales. Pour un travail scolaire, privilégier les sources primaires et les publications officielles.
+      </p>
+
+      <ul class="sources-list">
+        <li>INSEE — données démographiques et sociales</li>
+        <li>Ministère de la Transition Écologique — rapports</li>
+        <li>Rapports parlementaires</li>
+        <li>Articles de la presse nationale (Le Monde, Libération, etc.)</li>
+        <li>Ouvrages universitaires et essais contemporains</li>
+      </ul>
+    </article>
+  </template>
+
+  <!-- Instagram fictif -->
+  <template id="tpl-instagram">
+    <article class="section">
+      <h2>Le Révolutionniste — Profil Instagram (factice)</h2>
+      <div class="insta-profile">
+        <img class="insta-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Avatar Le Révolutionniste">
+        <div class="insta-meta">
+          <h3>Le Révolutionniste <span class="muted">• compte fictif</span></h3>
+          <p class="muted">🔎 Analyses historiques et sociales • Étudiant • France</p>
+          <p class="bio">« Comprendre les mouvements et raconter la France d’aujourd’hui. Archives, photos et récits. »</p>
+        </div>
+      </div>
+
+      <div class="insta-stats">
+        <div><strong>1 248</strong><span> publications</span></div>
+        <div><strong>24,5k</strong><span> abonnés</span></div>
+        <div><strong>512</strong><span> abonnements</span></div>
+      </div>
+
+      <div class="insta-actions">
+        <button class="btn primary">S'abonner</button>
+        <button class="btn outline">Message</button>
+      </div>
+
+      <h3 class="section-sub">Publications récentes</h3>
+
+      <div class="insta-grid">
+        <!-- Many posts: each img uses Unsplash; change URLs freely -->
+        <div class="insta-post">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80" alt="Post 1">
+          <p class="caption"><strong>Le Révolutionniste</strong> • 12 mars 2025 — Retour sur les grandes manifestations contemporaines. #histoire #société</p>
+        </div>
+        <div class="insta-post">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Post 2">
+          <p class="caption"><strong>Le Révolutionniste</strong> • 02 février 2025 — Portrait d'une métropole en mutation. #urbanisme</p>
+        </div>
+        <div class="insta-post">
+          <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=800&q=80" alt="Post 3">
+          <p class="caption"><strong>Le Révolutionniste</strong> • 23 janvier 2025 — À propos du patrimoine immatériel. #culture</p>
+        </div>
+        <div class="insta-post">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Post 4">
+          <p class="caption"><strong>Le Révolutionniste</strong> • 11 janvier 2025 — Témoignages et archives photographiques. #archives</p>
+        </div>
+        <div class="insta-post">
+          <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80" alt="Post 5">
+          <p class="caption"><strong>Le Révolutionniste</strong> • 28 décembre 2024 — Événements climatiques et réponses locales. #écologie</p>
+        </div>
+        <div class="insta-post">
+          <img src="https://images.unsplash.com/photo-1505691723518-36a5b37b1c5d?auto=format&fit=crop&w=800&q=80" alt="Post 6">
+          <p class="caption"><strong>Le Révolutionniste</strong> • 05 décembre 2024 — Innovation et emplois : entre espoirs et réalités. #économie</p>
+        </div>
+      </div>
+
+      <p class="muted small">Tous les posts sont fictifs et destinés à un usage pédagogique.</p>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
 </body>
 </html>
