@@ -1,16 +1,47 @@
+@page {
+    margin: 2.5cm;
+}
+
 body {
     font-family: Georgia, serif;
     color: black;
+    background: white;
 }
 
-nav, footer {
+/* On enlève tout ce qui est navigation */
+header, nav, footer {
     display: none;
 }
 
+/* Le texte prend toute la largeur */
 main {
     max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-img {
+/* Titres sobres */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1cm;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1cm;
+}
+
+/* Paragraphes lisibles */
+p {
+    font-size: 1.05rem;
+}
+
+/* Images bien intégrées, jamais coupées */
+figure, img {
     page-break-inside: avoid;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #444;
 }
