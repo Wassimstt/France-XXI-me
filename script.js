@@ -1,7 +1,5 @@
-// Highlight automatique du lien actif (optionnel mais moderne)
-const links = document.querySelectorAll(".nav-link");
-links.forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add("active");
-    }
-});
+/*
+Ce site privilégie la lecture et le contenu.
+Aucun script interactif n’est nécessaire.
+Fichier conservé pour une structure propre.
+*/
